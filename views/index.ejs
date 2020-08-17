@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>This is page of Đinh Thanh Sơn</title>
+	</head>
+	<body>
+
+		<form action="/" method="post">
+			<input type="text" name="name">
+			<button type="submit">Submit</button>
+		</form>
+		<%if(listUser.length == 0){%>
+			<h1>Trong database của mày ko có người dùng nào</h1>
+		<%}%>
+		<%if(listUser.length > 0){%>
+		<h1>trong database của mày có những người dùng sau:</h1>
+			<%listUser.forEach((user)=>{%>
+				<p><%=user.name%></p>
+		 <%});%>
+		<%}%>
+	</body>
+</html>
